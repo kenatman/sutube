@@ -1,0 +1,9 @@
+{
+  "name": "sutube",
+  "version": "1.0.0",
+  "description": "Cloning Youtube with Vanilla & NodeJS",
+  "author": "Cho Yunsu",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
