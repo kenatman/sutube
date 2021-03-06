@@ -4,7 +4,8 @@ export const videos = [
     title: "Luffy",
     description: "Onepiece",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
     creator: {
       id: 111,
       name: "su",
@@ -16,7 +17,8 @@ export const videos = [
     title: "Zoro",
     description: "Onepiece",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
     creator: {
       id: 111,
       name: "su",
@@ -28,7 +30,8 @@ export const videos = [
     title: "Sanji",
     description: "Onepiece",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
     creator: {
       id: 22,
       name: "ssu",
@@ -40,7 +43,8 @@ export const videos = [
     title: "Franky",
     description: "Onepiece",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
     creator: {
       id: 22,
       name: "ssu",
