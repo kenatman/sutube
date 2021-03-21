@@ -1,5 +1,8 @@
 import passport from "passport";
-import { githubLoginCallback } from "./controllers/userController";
+import {
+  facebookLoginCallback,
+  githubLoginCallback,
+} from "./controllers/userController";
 import User from "./models/User";
 import routes from "./routes";
 
@@ -15,6 +18,21 @@ passport.use(
       callbackURL: `http://localhost:2500${routes.githubCallback}`,
     },
     githubLoginCallback
+  )
+);
+
+var FacebookStrategy = require("passport-facebook").Strategy;
+
+passport.use(
+  new FacebookStrategy(
+    {
+      clientID: process.env.FB_ID,
+      clientSecret: process.env.FB_SECRET,
+      callbackURL: "https://ea3336944d5c.ngrok.io${routes.facebookCallback}",
+      profileFields: ["id", "displayName", "photos", "email"],
+      scope: ["public_profile", "email"],
+    },
+    facebookLoginCallback
   )
 );
 
