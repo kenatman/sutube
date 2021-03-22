@@ -35,9 +35,8 @@ export const githubLoginCallback = async (_, __, profile, cb) => {
   const {
     _json: { id, avatar_url: avatarUrl, name, email },
   } = profile;
-
   try {
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ id });
     if (user) {
       user.githubId = id;
       user.save();
@@ -95,6 +94,8 @@ export const logout = (req, res) => {
 };
 
 export const getMe = (req, res) => {
+  const user = req.user;
+  console.log(user);
   res.render("userDetail", { pageTitle: "User Detail", user: req.user });
 };
 
