@@ -1,14 +1,14 @@
 import passport from "passport";
+import GitHubStrategy from "passport-github";
+import FacebookStrategy from "passport-facebook";
+import User from "./models/User";
 import {
   facebookLoginCallback,
   githubLoginCallback,
 } from "./controllers/userController";
-import User from "./models/User";
 import routes from "./routes";
 
 passport.use(User.createStrategy());
-
-var GitHubStrategy = require("passport-github").Strategy;
 
 passport.use(
   new GitHubStrategy(
@@ -20,8 +20,6 @@ passport.use(
     githubLoginCallback
   )
 );
-
-var FacebookStrategy = require("passport-facebook").Strategy;
 
 passport.use(
   new FacebookStrategy(
