@@ -15,7 +15,7 @@ passport.use(
     {
       clientID: process.env.GH_ID,
       clientSecret: process.env.GH_SECRET,
-      callbackURL: `http://localhost:4000${routes.githubCallback}`,
+      callbackURL: `http://localhost:2500${routes.githubCallback}`,
     },
     githubLoginCallback
   )
@@ -34,10 +34,5 @@ passport.use(
   )
 );
 
-passport.serializeUser(function (user, done) {
-  done(null, user);
-});
-
-passport.deserializeUser(function (user, done) {
-  done(null, user);
-});
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());

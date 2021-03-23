@@ -70,7 +70,7 @@ const routes = {
       return DELETE_VIDEO;
     }
   },
-  gitHub: GITHUB,
+  github: GITHUB,
   githubCallback: GITHUB_CALLBACK,
   me: ME,
   facebook: FB,
