@@ -8,6 +8,8 @@ block content
             if loggedUser&&video.creator.id === loggedUser.id
                 a(href=routes.editVideo(video.id))
                     button Edit video
+                a(href=routes.deleteVideo(video.id))
+                    button Delete video
             h5.video__title=video.title
             p.video__description=video.description
             if video.views === 1
