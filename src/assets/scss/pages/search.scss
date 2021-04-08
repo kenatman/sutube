@@ -1,0 +1,10 @@
+.search__header {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.search__videos {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(300px, 1fr));
+}
